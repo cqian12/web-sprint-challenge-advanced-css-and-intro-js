@@ -351,11 +351,11 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-//currently able to create the output for the original array, but have not yet determined how to add the image link from Kaggle
+//currently able to create the output for the original array, but have not yet determined how to add the image link from Kaggle or make mass one time addition of remaining 30 artists
 
 function getHTML(data) {
   for (var index in data) {
-    console.log (`<div id ="artist"> \n<div class ="image">\n  <img src=""/>\n</div>\n<div class = "name">\n   <a href='${data[index].wikipedia}'\n</div>\n<div class = "bio">${data[index].bio}</div>\n</div>`)
+    console.log (`<div id ="artist">\n<div class ="image">\n  <img src=""/>\n</div>\n<div class = "name">\n   <a href='${data[index].wikipedia}'\n</div>\n<div class = "bio">${data[index].bio}</div>\n</div>`)
   }
 }
 
