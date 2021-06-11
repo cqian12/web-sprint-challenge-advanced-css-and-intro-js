@@ -351,12 +351,14 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/*tbd*/){
-
-    /* Code here */
-
+function getHTML(data) {
+  for (in data) {
+    console.log (`<div id ="artist"> \n <div class ="image">\n  <img src="${data[i].}`)
   }
+}
 
+console.log("stretch1")
+getHTML(artists)
 
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
@@ -372,7 +374,7 @@ function randomize(array){
   return newArray
 }
 
-console.log(randomize(artists))
+//console.log(randomize(artists))
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
