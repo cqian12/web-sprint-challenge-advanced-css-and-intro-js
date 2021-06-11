@@ -151,17 +151,25 @@ button:hover{
     .title-container div { /*resized title section to stretch across entire page */
         width:100%;
     }
+    .title-container h1 { /*made title font size and line height smaller */
+        font-size: 5rem;
+        line-height: 1.2;
+    }
     .title-container hr { /*resized border to stretch across entire page */
         width:100%;
     }
     .artists-container { /*adjusted artists section to have artists flow vertically */
         justify-content: center;
         flex-wrap: wrap;
+        width: 90%;
     }
     .artist { /*adjusted artists section to have artists flow vertically */
-        width:80%;
+        width:90%;
     }
     .artist img { /*adjusted art images so that they are less wide than the bios below, per mobile design file*/
         width: 70%;
+    }
+    .artist .bio { /*adjusted bio font size down per mobile design file*/
+        font-size: 1.3rem;
     }
 }
