@@ -293,17 +293,17 @@ Use addArtist to do the following:
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
 function addArtist(array){
-  let newArtist = {
+  let newArtist = { //create new object with required data
     id: 20,
     name:'Charles Qian',
     years: '1989 - 2021',
     genre: 'Web Design',
     nationality:'USA',
-    bio: 'Charles Qian (Chinese: Qian Haochuan) was a Chinese American web development student. He became well known for writing his own bio in the sprint challenge'
+    bio: 'Charles Qian (Chinese: Qian Haochuan) is a Chinese American web development student. He became well known for writing his own bio in the sprint challenge'
   }
-    array.push(newArtist)
+    array.push(newArtist) //add new object to end of array of objects
 
-    return array
+    return array //return modified array
   }
 
 //console.log(addArtist(artists), artists)
@@ -316,11 +316,11 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 function lotsOfArt(array){
-  let newArray = []
+  let newArray = [] //return array
 
-  for (let i = 0; i < array.length; i++) {
-    if (array[i].paintings > 100) {
-      newArray.push(array[i].name)
+  for (let i = 0; i < array.length; i++) { //iterate through each object in the array
+    if (array[i].paintings > 100) { //check to see if the artist has over 100 paintings, then
+      newArray.push(array[i].name) //add the artist object to the return array if so
     }
   }
   return newArray
@@ -351,35 +351,36 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
+//currently able to create the output for the original array, but have not yet determined how to add the image link from Kaggle
+
 function getHTML(data) {
-  for (in data) {
-    console.log (`<div id ="artist"> \n <div class ="image">\n  <img src="${data[i].}`)
+  for (var index in data) {
+    console.log (`<div id ="artist"> \n<div class ="image">\n  <img src=""/>\n</div>\n<div class = "name">\n   <a href='${data[index].wikipedia}'\n</div>\n<div class = "bio">${data[index].bio}</div>\n</div>`)
   }
 }
 
-console.log("stretch1")
-getHTML(artists)
+//getHTML(artists)
 
 /* 💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪
 Create a function called `randomize` that takes a data array as an argument and returns a the same array in a randomized order. */
 
 function randomize(array){
-  let newArray = []
+  let newArray = [] //return array
   
-  for (let i = 0; i < array.length; i++) {
-    let randomNum = Math.random() * array.length
-    newArray.push(array[randomNum])
-    array.splice(randomNum,1)
+  for (let i = array.length; i >= 0; i--) { //iterate through data array
+    let randomNum = Math.round(Math.random() * i) //determine a random index
+    newArray.push(array[randomNum]) //add data at that index to return array
+    array.splice(randomNum,1) //remove data from original array, which changes array length accordingly 
   }
   return newArray
 }
 
-//console.log(randomize(artists))
+//console.log('stretch2',randomize(artists))
 
  /* 💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪
  Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
 
- 
+//did not attempt 
  
  
  /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
